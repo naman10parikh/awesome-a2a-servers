@@ -1,23 +1,35 @@
-# Contributing to Awesome A2A Servers
+# Contribution Guidelines
 
-Thank you for your interest in contributing to this list! Your help is essential for keeping this resource up-to-date and comprehensive.
+Thank you for your interest in contributing to Awesome A2A Servers! This document provides guidelines on how to contribute to this repository.
 
-## How to Contribute
+## Adding to this list
 
-1.  **Fork the repository:** Click the "Fork" button at the top right of this page.
-2.  **Clone your fork:** `git clone https://github.com/YOUR_USERNAME/awesome-a2a-servers.git`
-3.  **Create a new branch:** `git checkout -b add-my-new-resource`
-4.  **Make your changes:** Edit the `README.md` file to add your A2A server, client, tool, or resource. Please try to follow the existing format and include relevant details like name, description, language/scope (if applicable), and a link.
-5.  **Commit your changes:** `git commit -am 'Add: [Resource Name]'`
-6.  **Push to the branch:** `git push origin add-my-new-resource`
-7.  **Open a Pull Request:** Go back to the original repository on GitHub and click the "New pull request" button. Provide a clear title and description for your changes.
+Please ensure your pull request adheres to the following guidelines:
 
-## Guidelines
+- Search previous suggestions before making a new one, as yours may be a duplicate.
+- Make sure your contribution is useful and relevant before submitting. That implies it has enough content and a good, succinct description.
+- Make an individual pull request for each suggestion.
+- Use [title-casing](https://capitalizemytitle.com/) (AP style) for titles.
+- Use the following format: `* [Name](link) - Description.`
+- Keep descriptions short and simple, but descriptive.
+- Check your spelling and grammar.
+- Make sure your text editor is set to remove trailing whitespace.
+- The pull request should have a useful title and include a link to the package and why it should be included.
+- New categories, or improvements to the existing categorization are welcome, but should be done in a separate pull request.
 
-- Ensure the resource is directly related to the Google A2A protocol.
-- Provide a clear description and a direct link to the resource (repository, documentation, website, etc.).
-- Check if the resource already exists in the list.
-- Ensure the link is working and points to the correct resource.
-- Keep the formatting consistent with the rest of the list.
+## Requirements for new entries
 
-We appreciate your contributions! 
+- The entry should be related to A2A Protocol implementation or utilities that enhance A2A server capabilities.
+- The project should be actively maintained, have documentation, and be usable in an A2A ecosystem.
+- If it's a library or framework, it should have good documentation and provide enough examples for usage.
+- If it's a server implementation, it should adhere to the official A2A protocol specification.
+
+## Updating your Pull Request
+
+Sometimes, we might ask you to edit your Pull Request before it is included. This is normally due to spelling errors or because your PR didn't match the guidelines. If we ask you to update your PR, please:
+
+1. Make the required updates.
+2. Make sure the PR title is still descriptive.
+3. Reply to the comments once done.
+
+Thank you for your suggestions! 

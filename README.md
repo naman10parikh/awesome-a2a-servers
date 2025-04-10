@@ -1,85 +1,33 @@
 # Awesome A2A Servers [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-A curated list of awesome Agent2Agent (A2A) servers.
+A curated list of awesome Agent-to-Agent (A2A) Protocol servers.
 
 * [What is A2A?](#what-is-a2a)
 * [Clients](#clients)
 * [Tutorials](#tutorials)
 * [Server Implementations](#server-implementations)
 * [Frameworks](#frameworks)
-* [Tools & Utilities](#tools--utilities)
-* [Community](#community)
-* [Contributing](#contributing)
+* [Utilities](#utilities)
+* [Tips & Tricks](#tips--tricks)
 
 ## What is A2A?
 
-A2A (Agent2Agent) is an open protocol created by Google that enables AI agents from different frameworks and vendors to communicate and collaborate seamlessly. It aims to break down silos, allowing composite multi-agent workflows across diverse enterprise platforms by providing a common "language" for agents.
+A2A (Agent-to-Agent) is an open protocol initiated by Google that enables communication and interoperability between AI agents built on different frameworks or by different vendors. The core goal is to allow agents to discover each other's capabilities, negotiate interaction modes (text, forms, files, etc.), and collaborate securely on tasks.
 
-A2A complements the Model Context Protocol (MCP) - while MCP focuses on how AI agents access external tools and data, A2A focuses on how agents communicate with each other to coordinate tasks.
+The A2A protocol uses JSON-RPC 2.0 over HTTP(S) and supports both standard request/response patterns and Server-Sent Events (SSE) for streaming updates.
 
-* **Official Repository:** [google/A2A](https://github.com/google/A2A)
-* **Official Documentation:** [A2A Documentation](https://google.github.io/A2A/)
+## Official Resources
+
+* [A2A Protocol GitHub Repository](https://github.com/google/A2A) - Google's official repository for A2A protocol
+* [A2A Specification](https://github.com/google/A2A/blob/main/specification/json/a2a.json) - JSON Schema defining A2A protocol
 
 ## Clients
 
-Clients are necessary for interacting with A2A servers.
-
-| Type               | Name                  | Description                              | Link                                                                 |
-|--------------------|-----------------------|------------------------------------------|----------------------------------------------------------------------|
-| 🎖️ Official Sample | Python A2A Client     | Official Python client sample code       | [google/A2A/.../common](https://github.com/google/A2A/tree/main/samples/python/common) |
-| 🎖️ Official Sample | JavaScript A2A Client | Official JavaScript client sample code   | [google/A2A/.../src](https://github.com/google/A2A/tree/main/samples/js/src) |
-| Library            | Python A2A Library    | Production-ready library by Manoj Desai  | [themanojdesai/python-a2a](https://github.com/themanojdesai/python-a2a) |
+* Check out sample clients in the [official A2A repository](https://github.com/google/A2A/tree/main/samples)
 
 ## Tutorials
 
-* [A2A Protocol Overview](https://zenn.dev/zawawahoge/scraps/1b06081403a8b7) - In-depth technical overview of A2A architecture and MCP comparison
-
-## Server Implementations
-
-### Official Samples
-
-These servers are provided by Google as examples within the official A2A repository.
-
-| Name                  | Description                              | Details                | Link                                                                 |
-|-----------------------|------------------------------------------|------------------------|----------------------------------------------------------------------|
-| Google ADK A2A Server | Expense reimbursement sample             | 🐍 Python, 🏠 Local    | [google/A2A/.../google_adk](https://github.com/google/A2A/tree/main/samples/python/agents/google_adk) |
-| LangGraph A2A Server  | Sample using LangGraph                   | 🐍 Python, ☁️ Cloud    | [google/A2A/.../langgraph](https://github.com/google/A2A/tree/main/samples/python/agents/langgraph) |
-| CrewAI A2A Server     | Sample using CrewAI framework            | 🐍 Python, ☁️ Cloud    | [google/A2A/.../crewai](https://github.com/google/A2A/tree/main/samples/python/agents/crewai) |
-| Genkit A2A Server     | Sample using Genkit                      | 📇 JavaScript, ☁️ Cloud | [google/A2A/.../agents](https://github.com/google/A2A/tree/main/samples/js/src/agents) |
-
-### Third-Party Servers
-
-These servers are developed and maintained by the community.
-
-| Name                   | Description                       | Details             | Link                                                            |
-|------------------------|-----------------------------------|---------------------|-----------------------------------------------------------------|
-| Google Maps A2A Server | Provides Google Maps capabilities | 🐍 Python, ☁️ Cloud | [pab1it0/google-maps-a2a](https://github.com/pab1it0/google-maps-a2a) |
-
-*(Currently, the list of known third-party public servers is limited. Please contribute if you know of others!)*
-
-## Frameworks
-
-> Currently, there are no known A2A-specific frameworks. Please contribute if you know of any!
-
-## Tools & Utilities
-
-Tools to help with A2A development and testing.
-
-| Type               | Name                  | Description                       | Details             | Link                                                                 |
-|--------------------|-----------------------|-----------------------------------|---------------------|----------------------------------------------------------------------|
-| 🎖️ Official Sample | A2A CLI (Python)      | Command-line interface for Python | 🐍 Python           | [google/A2A/.../cli](https://github.com/google/A2A/tree/main/samples/python/hosts/cli) |
-| 🎖️ Official Sample | A2A CLI (JavaScript)  | Command-line interface for JS     | 📇 JavaScript       | [google/A2A/.../js](https://github.com/google/A2A/tree/main/samples/js) |
-
-## Demos and Examples
-
-Practical demonstrations of A2A in action.
-
-* **Multi-Agent Web App Demo:** Showcases A2A communication between multiple agents in a web application. ([google/A2A/demo](https://github.com/google/A2A/tree/main/demo))
-
-## Community
-
-* **Official Announcement:** [A2A: A New Era of Agent Interoperability](https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/) (Google Developers Blog)
-* **Community Article:** [Meet Google A2A...](https://medium.com/@the_manoj_desai/meet-google-a2a-the-protocol-that-will-revolutionize-multi-agent-ai-systems-80d55a4583ed) (Medium article on Python A2A by Manoj Desai)
+* [Getting Started with A2A Protocol](https://github.com/google/A2A#getting-started) - Official getting started guide
 
 ## Legend
 
@@ -94,18 +42,64 @@ Practical demonstrations of A2A in action.
 * scope  
    * ☁️ - Cloud Service  
    * 🏠 - Local Service
+* operating system  
+   * 🍎 – For macOS  
+   * 🪟 – For Windows
+   * 🐧 – For Linux
 
-**Note**
+## Server Implementations
 
-Confused about Local 🏠 vs Cloud ☁️?
+### 🐍 Python
 
-* Use local when A2A server is talking to a locally installed software or providing capabilities accessible only within a local environment
-* Use cloud when A2A server is talking to remote APIs or services accessible over network/internet
+* 🎖️ [ADK Agent](https://github.com/google/A2A/tree/main/samples/python/agents/google_adk) - Sample agent built with Google's Agent Developer Kit (ADK) that handles expense reports
+* 🎖️ [LangGraph Agent](https://github.com/google/A2A/tree/main/samples/python/agents/langgraph) - Currency conversion agent built with LangGraph
+* 🎖️ [CrewAI Agent](https://github.com/google/A2A/tree/main/samples/python/agents/crewai) - Image generation agent built with CrewAI
+
+### 📇 JavaScript/TypeScript  
+
+* 🎖️ [Genkit Movie Agent](https://github.com/google/A2A/tree/main/samples/js/src/agents/movie-agent) - Movie information agent built with Genkit
+* 🎖️ [Genkit Coder Agent](https://github.com/google/A2A/tree/main/samples/js/src/agents/coder) - Code generation agent built with Genkit
+
+### 🦀 Rust
+
+* [a2a-rs](https://github.com/EmilLindfors/a2a-rs) - A2A Protocol implementation for Rust following idiomatic Rust practices and hexagonal architecture principles
+
+## Frameworks
+
+* [Google ADK](https://github.com/google/A2A/tree/main/samples/python/agents/google_adk) - Google's Agent Developer Kit with A2A support
+* [LangGraph](https://github.com/google/A2A/tree/main/samples/python/agents/langgraph) - Framework for building stateful, multi-step agents
+* [CrewAI](https://github.com/google/A2A/tree/main/samples/python/agents/crewai) - Framework for creating and orchestrating role-playing agents
+* [Genkit](https://github.com/google/A2A/tree/main/samples/js/src/agents) - JavaScript framework for building generative AI applications
+
+## Utilities
+
+### Libraries
+
+* 🎖️ 🐍 [Python Common Library](https://github.com/google/A2A/tree/main/samples/python/common) - Python implementation of A2A client and server components
+* 🎖️ 📇 [JavaScript Common Library](https://github.com/google/A2A/tree/main/samples/js/src) - JavaScript/TypeScript implementation of A2A client and server components
+
+### Tools
+
+* 🎖️ 🐍 [Python CLI](https://github.com/google/A2A/tree/main/samples/python/hosts/cli) - Command-line tool to interact with A2A servers
+* 🎖️ 📇 [JavaScript CLI](https://github.com/google/A2A/tree/main/samples/js/src/cli.ts) - JavaScript command-line tool for interacting with A2A servers
+* 🎖️ 🐍 [Orchestrator Agent](https://github.com/google/A2A/tree/main/samples/python/hosts/multiagent) - An agent that can delegate tasks to remote agents through A2A
+
+## Tips & Tricks
+
+### Setting Up Your First A2A Server
+
+1. Clone the official A2A repository:
+   ```bash
+   git clone https://github.com/google/A2A.git
+   ```
+2. Choose one of the sample agents based on your preferred framework
+3. Follow the setup instructions in the agent's README file
+4. Use one of the CLI tools to interact with your agent
 
 ## Contributing
 
-Contributions are welcome! Please see the [CONTRIBUTING.md](CONTRIBUTING.md) file for guidelines on how to add new servers, clients, tools, or resources to this list.
+Please read the [contribution guidelines](CONTRIBUTING.md) before submitting a pull request.
 
 ## License
 
-This repository is licensed under the [MIT License](LICENSE). 
+This repository is licensed under [MIT License](LICENSE).
