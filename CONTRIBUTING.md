@@ -32,4 +32,4 @@ Sometimes, we might ask you to edit your Pull Request before it is included. Thi
 2. Make sure the PR title is still descriptive.
 3. Reply to the comments once done.
 
-Thank you for your suggestions! 
+Thank you for your suggestions!!! 
