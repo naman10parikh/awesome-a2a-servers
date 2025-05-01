@@ -110,7 +110,7 @@ Below is a list of A2A server implementations, categorized by their primary func
 
 ### 📊 Data Analysis & Database Integration
 
-> Servers for data processing, analytics, querying databases, or interacting with BI tools.
+> Servers for data processing, analytics, querying databases, or interacting with BI tools
 
 * 🐍 [Database Agent](https://github.com/wognsths/Database-Agent) - Database Agent using A2A architecture
 * 📇 [Search API](https://github.com/krickert/search-api) - Search API for the vector-based search engine ecosystem
