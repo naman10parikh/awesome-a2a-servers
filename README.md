@@ -22,10 +22,12 @@ A2A (Agent-to-Agent) is an open protocol initiated by Google that enables commun
 ## Clients
 
 * Check out sample clients in the [official A2A repository](https://github.com/google/A2A/tree/main/samples)
+* 📇 [A2A CLI](https://github.com/chrishayuk/a2a-cli) - Command-line client for interacting with A2A servers
 
 ## Tutorials
 
 * [Getting Started with A2A Protocol](https://github.com/google/A2A#getting-started) - Official getting started guide
+* 📇 [A2A & MCP Tutorial](https://github.com/Tsadoq/a2a-mcp-tutorial) - A tutorial on using Model Context Protocol by Anthropic and Agent2Agent Protocol by Google
 
 ## Legend
 
@@ -63,68 +65,32 @@ Below is a list of known A2A server implementations, categorized by their primar
 
 > Servers for controlling and automating web browsers.
 
-* *No entries yet. [Contribute](CONTRIBUTING.md)!*
+* 📇 [Grasp](https://github.com/aircodelabs/grasp) - Self-hosted agentic browser with built-in MCP, A2A support.
 
 ### 💼 Business & Productivity Tools
 
 > Servers interfacing with common business software like CRMs, ERPs, project management tools, calendars, etc.
 
-* *No entries yet. [Contribute](CONTRIBUTING.md)!*
-
-### ☁️ Cloud Platform Management
-
-> Servers for managing resources on cloud platforms (AWS, GCP, Azure, etc.).
-
-* *No entries yet. [Contribute](CONTRIBUTING.md)!*
+* 🐍 [A2A MCP Demo](https://github.com/doogie-bigmack/a2a_mcp_demo) - A2A and MCP agent demo showing integration with business systems.
 
 ### 💬 Communication Services
 
 > Servers for messaging, email, notifications, and other communication tools.
 
-* *No entries yet. [Contribute](CONTRIBUTING.md)!*
+* 📇 [A2AChat](https://github.com/Web-Engine/A2AChat) - A2A-compatible chat application.
+* 📇 [Swissknife](https://github.com/daltonnyx/swissknife) - Chat application with multi-agents system supporting multiple models and MCP.
 
 ### 📊 Data Analysis & Database Integration
 
 > Servers for data processing, analytics, querying databases, or interacting with BI tools.
 
-* *No entries yet. [Contribute](CONTRIBUTING.md)!*
-
-### 🧬 Data Science & Machine Learning
-
-> Servers providing tools for data science workflows, model training, or ML operations.
-
-* *No entries yet. [Contribute](CONTRIBUTING.md)!*
-
-### 🛠️ Developer Tools
-
-> Servers for software development tasks, code generation, version control interaction, code execution, and DevOps.
-
-* *See [google/genkit-coder](#official-samples) for an example code generation tool.*
-* 🦀 [a2a-rs](https://github.com/EmilLindfors/a2a-rs) - A2A Protocol implementation for Rust. While primarily a library/framework, it can be used to build developer tool agents.
-
-### 📁 File System Operations
-
-> Servers for interacting with local or remote file systems.
-
-* *No entries yet. [Contribute](CONTRIBUTING.md)!*
+* 🐍 [Database Agent](https://github.com/wognsths/Database-Agent) - Database Agent using A2A architecture.
 
 ### 💰 Financial Services
 
 > Servers for financial operations, currency conversion, and financial data.
 
-* *See [google/langgraph](#official-samples) for an example currency conversion tool.*
-
-### 🎮 Gaming & Entertainment
-
-> Servers interacting with games, streaming services, or providing entertainment-related information.
-
-* *No entries yet. [Contribute](CONTRIBUTING.md)!*
-
-### ❤️ Healthcare & Wellness
-
-> Servers related to health data, fitness tracking, or wellness information. (Note: Handle sensitive data with extreme care and compliance).
-
-* *No entries yet. [Contribute](CONTRIBUTING.md)!*
+* 🐍 [Smart Crypto Portfolio Manager](https://github.com/tonycai/smart_crypto_portfolio_manager) - A sophisticated multi-agent system for intelligent cryptocurrency portfolio management using A2A communication.
 
 ### 🏠 Home Automation (IoT)
 
@@ -137,66 +103,35 @@ Below is a list of known A2A server implementations, categorized by their primar
 > Servers for generating images, videos, audio, or other media.
 
 * *See [google/crewai](#official-samples) for an example image generation tool.*
+* 🐍 [Movie Script Generator](https://github.com/nevermined-io/movie-script-generator-agent-crew-ai) - A2A server for generating movie scripts using AI technology.
 
 ### 🔄 Integration Services
 
 > Servers that act as bridges or gateways to various APIs, platforms, and services (e.g., Zapier-like functionality).
 
-* *No entries yet. [Contribute](CONTRIBUTING.md)!*
-
-### 🧠 Knowledge & Document Management
-
-> Servers for interacting with knowledge bases, document repositories, note-taking apps, etc.
-
-* *No entries yet. [Contribute](CONTRIBUTING.md)!*
+* 📇 [n8n-nodes-agent2agent](https://github.com/pjawz/n8n-nodes-agent2agent) - Adds nodes to n8n for interacting with AI agents using A2A protocol.
+* 🏎️ [Agent Gateway](https://github.com/agentgateway/agentgateway) - Next Generation Agentic Proxy for API integrations.
+* 🐍 [EC2 Creation MCP Tool](https://github.com/anirban1592/google_openai_mcp) - Demonstrates how Google's A2A protocol works with Anthropic's MCP protocol for AWS EC2 creation.
 
 ### 🗺️ Location Services
 
 > Servers providing geospatial data, mapping, directions, and place information.
 
 * 🐍 [Google Maps A2A Server](https://github.com/pab1it0/google-maps-a2a) - An A2A-compliant server that provides Google Maps capabilities including geocoding, reverse geocoding, directions, places search, place details, and distance matrix calculations.
+* 📇 [Gemini A2A Chat with Google Maps](https://github.com/jeantimex/gemini-a2a-chat) - Node.js chat app using Gemini function calling and an A2A server to interact with Google Maps APIs.
 
-### 📈 Marketing & Sales Automation
+### 💊 Healthcare & Wellness
 
-> Servers interacting with marketing automation platforms, analytics, or sales tools.
+> Servers related to health data, fitness tracking, or wellness information.
 
-* *No entries yet. [Contribute](CONTRIBUTING.md)!*
-
-### ⏱️ Monitoring & Observability
-
-> Servers for accessing monitoring data, logs, or interacting with observability platforms.
-
-* *No entries yet. [Contribute](CONTRIBUTING.md)!*
-
-### 👤 Personal Assistant & Task Management
-
-> Servers for managing personal tasks, schedules, reminders, and providing assistant-like capabilities.
-
-* *No entries yet. [Contribute](CONTRIBUTING.md)!*
+* 📇 [Health Record MCP](https://github.com/jmandel/health-record-mcp) - Connect to an EHR and make clinical data available via MCP.
 
 ### 🔎 Search & Data Extraction
 
 > Servers for web search, data retrieval, document querying, and information extraction.
 
 * *See [google/genkit-movie](#official-samples) for an example data extraction tool.*
-
-### 🔒 Security & Compliance
-
-> Servers providing security functions, vulnerability scanning, or compliance checks.
-
-* *No entries yet. [Contribute](CONTRIBUTING.md)!*
-
-### 🌐 Translation & Language Services
-
-> Servers providing text translation or other language processing capabilities.
-
-* *No entries yet. [Contribute](CONTRIBUTING.md)!*
-
-### 🚆 Travel & Transportation
-
-> Servers for travel planning, flight/hotel booking, and transportation services.
-
-* *No entries yet. [Contribute](CONTRIBUTING.md)!*
+* 📇 [PocketFlow-Tutorial](https://github.com/The-Pocket/PocketFlow-Tutorial-Codebase-Knowledge) - Turns GitHub repositories into easy tutorials with AI.
 
 ## Frameworks
 
@@ -204,6 +139,10 @@ Below is a list of known A2A server implementations, categorized by their primar
 * [LangGraph](https://github.com/google/A2A/tree/main/samples/python/agents/langgraph) - Framework for building stateful, multi-step agents
 * [CrewAI](https://github.com/google/A2A/tree/main/samples/python/agents/crewai) - Framework for creating and orchestrating role-playing agents
 * [Genkit](https://github.com/google/A2A/tree/main/samples/js/src/agents) - JavaScript framework for building generative AI applications
+* 🐍 [Mentis](https://github.com/foreveryh/mentis) - A powerful multi-agent orchestration framework built on LangGraph
+* 🐍 [Qredence Agentic-Kernel](https://github.com/Qredence/Agentic-Kernel) - A flexible foundation AI system for creating A2A-compatible autonomous AI agents
+* 🐍 [PocketFlow](https://github.com/The-Pocket/PocketFlow) - Pocket Flow: 100-line LLM framework that lets agents build agents
+* 📇 [Agent Hub](https://github.com/chandrakanthm/agentHub) - Keeps AI agents discoverable, composable, and resilient
 
 ## Utilities
 
@@ -211,12 +150,20 @@ Below is a list of known A2A server implementations, categorized by their primar
 
 * 🎖️ 🐍 [Python Common Library](https://github.com/google/A2A/tree/main/samples/python/common) - Python implementation of A2A client and server components
 * 🎖️ 📇 [JavaScript Common Library](https://github.com/google/A2A/tree/main/samples/js/src) - JavaScript/TypeScript implementation of A2A client and server components
+* 🏎️ [a2a-go](https://github.com/TheApeMachine/a2a-go) - A2A server in Go for facilitating communication between software agents
+* 📇 [nestjs-a2a](https://github.com/thestupd/nestjs-a2a) - A NestJS library for implementing A2A protocol
+* ☕ [a2a4j](https://github.com/imfangs/a2a4j) - A Java implementation of the A2A protocol
+* #️⃣ [a2a-net](https://github.com/neuroglia-io/a2a-net) - .NET implementation of the A2A protocol
+* 🏎️ [trpc-a2a-go](https://github.com/trpc-group/trpc-a2a-go) - Go implementation for A2A protocol
+* 🦀 [a2a-rs](https://github.com/EmilLindfors/a2a-rs) - A2A Protocol implementation for Rust
 
 ### Tools
 
 * 🎖️ 🐍 [Python CLI](https://github.com/google/A2A/tree/main/samples/python/hosts/cli) - Command-line tool to interact with A2A servers
 * 🎖️ 📇 [JavaScript CLI](https://github.com/google/A2A/tree/main/samples/js/src/cli.ts) - JavaScript command-line tool for interacting with A2A servers
 * 🎖️ 🐍 [Orchestrator Agent](https://github.com/google/A2A/tree/main/samples/python/hosts/multiagent) - An agent that can delegate tasks to remote agents through A2A
+* 📇 [A2A UI](https://github.com/egor-baranov/a2a-ui) - UI for Google A2A made using Next.js, TypeScript and Shadcn
+* 🏎️ [ka](https://github.com/tot-ra/ka) - AI agent accessible via CLI or network, A2A compatible
 
 ## Tips & Tricks
 
