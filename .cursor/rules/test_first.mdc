@@ -1,0 +1,184 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+---
+description: Enforces test-driven development workflow with AI assistance
+globs: "**/*.{ts,tsx,js,jsx,py,java,rb,php,go,cs,rust,swift}"
+alwaysApply: true
+---
+
+# Test-Driven Development with AI
+
+## Core Workflow
+
+- **✅ DO: Always follow this sequence:**
+  1. Write tests first
+  2. Implement code
+  3. Run tests
+  4. Iterate code until tests pass
+
+- **❌ DON'T:**
+  - Skip writing tests
+  - Write implementation before tests
+  - Leave failing tests unresolved
+  - Ignore test coverage
+
+## Test Writing Phase
+
+- **Test Structure Requirements (Language Agnostic):**
+  - Write descriptive test names
+  - Include tests for basic functionality
+  - Cover edge cases
+  - Test error conditions
+  - Ensure proper assertions
+
+- **Test Coverage Guidelines:**
+  - Basic functionality tests
+  - Edge case tests
+  - Error handling tests
+  - Input validation tests
+  - Integration tests if needed
+
+## Implementation Phase
+
+- **✅ DO: Follow iterative implementation:**
+  1. Start with minimal implementation
+  2. Run tests
+  3. Expand implementation based on failures
+  4. Repeat until all tests pass
+
+- **Implementation Checklist:**
+  1. Write minimal code to make tests compile
+  2. Run tests to see failures
+  3. Implement functionality to pass one test
+  4. Refactor while keeping tests green
+  5. Repeat for remaining tests
+
+## Test Running & Iteration
+
+- **✅ DO: Use automated test commands (adapt for your language/framework):**
+  - Run tests and watch for changes
+  - Run tests with coverage reports
+  - Execute focused tests during development
+
+- **Iteration Guidelines:**
+  1. Review test failures
+  2. Make targeted changes
+  3. Re-run tests
+  4. Refactor when tests pass
+
+## AI Assistance Integration
+
+- **✅ DO: Use AI effectively:**
+  - Request test cases before implementation
+  - Ask for comprehensive test coverage
+  - Get help with test debugging
+  - Review implementation suggestions
+
+- **AI Prompting Best Practices:**
+  - Explicitly request "Write tests first, then implementation"
+  - Ask for edge case testing
+  - Request test-running commands
+  - Seek help with debugging failures
+
+## Language-Specific Examples
+
+### JavaScript/TypeScript (Jest/Vitest)
+```javascript
+// Test
+describe('functionName', () => {
+  it('should handle basic case', () => {
+    expect(functionName('input')).toBe('expected');
+  });
+});
+
+// Implementation
+function functionName(input) {
+  return 'expected';
+}
+```
+
+### Python (pytest)
+```python
+# Test
+def test_function_name():
+    assert function_name("input") == "expected"
+    
+# Implementation
+def function_name(input):
+    return "expected"
+```
+
+### Java (JUnit)
+```java
+// Test
+@Test
+public void testFunctionName() {
+    assertEquals("expected", functionName("input"));
+}
+
+// Implementation
+public String functionName(String input) {
+    return "expected";
+}
+```
+
+### Ruby (RSpec)
+```ruby
+# Test
+describe "#function_name" do
+  it "handles basic case" do
+    expect(function_name("input")).to eq("expected")
+  end
+end
+
+# Implementation
+def function_name(input)
+  "expected"
+end
+```
+
+## Verification Steps
+
+1. Confirm all test cases are written
+2. Verify test coverage is adequate
+3. Ensure all tests are passing
+4. Check code quality and performance
+5. Review error handling
+
+## Best Practices
+
+1. Write clear test descriptions
+2. Keep tests focused and atomic
+3. Use meaningful test data
+4. Maintain test independence
+5. Follow arrange-act-assert pattern
+
+## Example Workflow for Any Language
+
+1. Write tests first with clear expectations
+2. Implement minimally to compile/run
+3. Run tests to see failures
+4. Improve implementation to pass one test
+5. Refactor if needed while maintaining passing tests
+6. Repeat until all tests pass
+
+## Recommended Test Frameworks
+
+- JavaScript/TypeScript: Jest, Vitest, Mocha
+- Python: pytest, unittest
+- Java: JUnit, TestNG
+- Ruby: RSpec, Minitest
+- Go: testing package
+- PHP: PHPUnit
+- C#: xUnit, NUnit, MSTest
+- Rust: built-in testing module
+- Swift: XCTest
+
+## References
+
+- Generic TDD principles: Write test, see failure, implement, pass test, refactor
+- Language-specific testing best practices from official documentation
+- Testing pyramid: Unit tests, integration tests, end-to-end tests

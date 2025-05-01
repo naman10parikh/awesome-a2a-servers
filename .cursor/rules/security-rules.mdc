@@ -1,0 +1,10 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+- rate limit all api endpoints
+- use row level security always (RLS)
+- captcha on all auth routes/signup pages
+- if using hosting solution like vercel, enaple attack challenge on their
+WAF

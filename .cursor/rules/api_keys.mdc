@@ -1,0 +1,84 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# API Key Management Rules
+
+## Environment Configuration
+- Primary location for API keys: `.env` file in project root
+- Secondary locations:
+  - `~/.env` (user home directory)
+  - Environment variables set in shell
+
+## Required API Key Format
+All API keys should be stored in SCREAMING_SNAKE_CASE:
+```SERVICE_NAME_API_KEY```
+
+## Common API Keys
+The following API keys should be checked in these locations:
+
+### Authentication & Database
+- `SUPABASE_URL`
+- `SUPABASE_ANON_KEY`
+- `SUPABASE_SERVICE_ROLE_KEY`
+
+### AI Services
+- `OPENAI_API_KEY`
+- `ANTHROPIC_API_KEY`
+- `GOOGLE_AI_API_KEY`
+
+### Version Control
+- `GITHUB_ACCESS_TOKEN`
+
+## Behavior Rules
+
+1. ALWAYS check for API keys in the following order:
+   - Project `.env`
+   - User home `.env`
+   - System environment variables
+
+2. NEVER:
+   - Hardcode API keys in source code
+   - Commit API keys to version control
+   - Log API keys in console or logs
+   - Store API keys in public configs
+3. WHEN MISSING KEYS:
+   - Pause execution
+   - List which specific API keys are missing
+   - Ask user to provide the missing keys
+   - Suggest the correct environment variable name
+   - Wait for user confirmation before proceeding
+
+4. FOR NEW SERVICES:
+   - Check if service requires API key
+   - Follow naming convention: `SERVICE_NAME_API_KEY`
+   - Document the new key requirement in this rules file
+   - Add to `.env.example` if creating new service
+
+## Security Guidelines
+- Use environment variables for all API keys
+- Implement rate limiting where applicable
+- Rotate keys if accidentally exposed
+- Use minimum required permissions/scopes
+- Validate key format before using
+
+## Testing
+- Use mock API keys for test environment
+- Never use production keys in tests
+- Store test keys in `.env.test`
+
+## Error Handling
+If API key is:
+- Missing: Pause and request from user
+- Invalid: Log error without exposing key
+- Expired: Notify user to update key
+```
+
+This rules file provides clear guidelines for:
+1. Where to look for API keys
+2. How to handle missing keys
+3. Naming conventions
+4. Security best practices
+5. Testing considerations
+6. Error handling procedures

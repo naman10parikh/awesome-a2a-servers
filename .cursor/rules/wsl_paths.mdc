@@ -1,0 +1,89 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# WSL Path Handling and TaskMaster Integration
+
+## Path Resolution in WSL
+
+- **WSL Path Format Requirements:**
+  - Use `//wsl.localhost/Ubuntu/` prefix for WSL paths in TaskMaster operations
+  - Example: `//wsl.localhost/Ubuntu/home/username/project`
+  - This format ensures proper path resolution between Windows and WSL
+
+- **TaskMaster Project Root in WSL:**
+  ```typescript
+  // ✅ DO: Use the full WSL path with proper prefix
+  const projectRoot = "//wsl.localhost/Ubuntu/home/username/project";
+  
+  // ❌ DON'T: Use raw WSL paths
+  const projectRoot = "/home/username/project";  // Will fail
+  ```
+
+## TaskMaster Initialization in WSL
+
+- **Correct Initialization Format:**
+  ```typescript
+  // ✅ DO: Initialize with proper WSL path
+  mcp_taskmaster_ai_initialize_project({
+    projectRoot: "//wsl.localhost/Ubuntu/home/username/project",
+    projectName: "project-name",
+    projectDescription: "Project description"
+  });
+  
+  // ❌ DON'T: Use direct WSL paths
+  mcp_taskmaster_ai_initialize_project({
+    projectRoot: "/home/username/project"  // Will fail
+  });
+  ```
+
+## Path Translation Guidelines
+
+- **Always translate paths for TaskMaster operations:**
+  - Add `//wsl.localhost/Ubuntu` prefix to WSL paths
+  - Keep the rest of the path structure unchanged
+  - This applies to all TaskMaster operations (init, parse-prd, etc.)
+
+## Error Prevention
+
+- **Common Path-Related Issues:**
+  - ENOENT errors often indicate incorrect path format
+  - Path resolution failures between Windows and WSL
+  - Directory access permission issues
+
+- **Troubleshooting Steps:**
+  1. Verify the path exists in WSL using `pwd`
+  2. Add proper WSL prefix to the path
+  3. Check file/directory permissions
+  4. Ensure path doesn't contain special characters
+
+## Best Practices
+
+- **Project Structure:**
+  - Keep projects in WSL user home directory
+  - Avoid spaces and special characters in paths
+  - Use consistent path format across all operations
+
+- **Path Handling:**
+  - Always use forward slashes (/)
+  - Include double forward slashes (//) for network paths
+  - Maintain the WSL prefix consistently
+
+## Integration with Other Tools
+
+- **Git Integration:**
+  - Git operations work with both path formats
+  - Use WSL path format for TaskMaster operations
+  - Standard paths for git commands
+
+- **IDE Integration:**
+  - VSCode and Cursor handle WSL paths automatically
+  - TaskMaster requires explicit WSL path format
+  - Other tools may need path translation
+
+## Reference
+
+- See [taskmaster.mdc](mdc:.cursor/rules/taskmaster.mdc) for TaskMaster tool details
+- See [dev_workflow.mdc](mdc:.cursor/rules/dev_workflow.mdc) for development workflow
+- Cross-reference with project-specific path requirements 

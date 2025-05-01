@@ -1,0 +1,60 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# Terminal Command Execution Guidelines
+
+## Automated Acceptance
+
+- **✅ DO: Always use flags for automated acceptance:**
+  - Use `-y` or `--yes` for package managers and installations
+  - Set `is_background: false` for all terminal commands
+  - Use `echo "y" | command` or `yes | command` for commands that require multiple confirmations
+
+- **❌ DON'T:**
+  - Leave terminal commands running indefinitely without timeouts
+  - Ask the user for confirmation before running common commands
+  - Wait for user input during a terminal command execution
+
+## Command Execution Flow
+
+- **Always follow this sequence:**
+  1. Run the command with proper flags for automatic acceptance
+  2. Wait for command completion with a reasonable timeout
+  3. Check command output for errors or success
+  4. Proceed to the next step without waiting for user confirmation
+
+## Common Command Patterns
+
+```bash
+# Package installation with auto-accept
+npm install package-name -y
+
+# Create-next-app with auto-accept
+yes | npx create-next-app@latest 
+
+# For commands with multiple prompts
+yes | command-with-prompts
+
+# Alternatively
+echo -e "y\ny\ny\n" | command-with-multiple-prompts
+```
+
+## Error Handling
+
+- If a command fails, check the error message and proceed with an alternative approach
+- Report errors to the user but continue with the conversation
+- Suggest fixes for common error patterns without asking for permission
+
+## Post-Command Actions
+
+- Always check command output for success or failure indicators
+- Move forward with subsequent steps without waiting for user input
+- Report completion status and proceed to the next logical action
+
+## Timeout Handling
+
+- Set reasonable timeouts for long-running commands
+- If a command appears stuck, terminate and retry with adjusted parameters
+- Always have a fallback approach ready if the primary command times out
