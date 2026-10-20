@@ -90,7 +90,7 @@ A2A (Agent-to-Agent) is an open protocol initiated by Google that enables commun
 
 ## Tutorials & Learning Resources
 
-* [Getting Started with A2A Protocol](https://github.com/google/A2A#getting-started) - Official getting started guide
+* [Getting Started with A2A Protocol](https://github.com/a2aproject/A2A#getting-started) - Official getting started guide
 * 📇 [A2A & MCP Tutorial](https://github.com/Tsadoq/a2a-mcp-tutorial) - A tutorial on how to use Model Context Protocol by Anthropic and Agent2Agent Protocol by Google
 * 🐍 [A2A ADK MCP Tutorial](https://github.com/RubensZimbres/A2A_ADK_MCP) - Multi-Agent Systems with Google's Agent Development Kit + A2A + MCP
 * 🐍 [Learn Agentic AI](https://github.com/panaversity/learn-agentic-ai) - Learn Agentic AI using Dapr Agentic Cloud Ascent (DACA) Design Pattern: OpenAI Agents SDK, Memory, MCP, A2A, Knowledge Graphs, Rancher Desktop, and Kubernetes
@@ -138,12 +138,12 @@ Below is a list of A2A server implementations, categorized by their primary func
 
 > Implementations provided in the official Google A2A repository.
 
-* 🎖️ [Google A2A](https://github.com/google/A2A) - An open protocol enabling communication and interoperability between opaque agentic applications
-* 🐍 [ADK Agent](https://github.com/google/A2A/tree/main/samples/python/agents/google_adk) - Sample agent built with Google's Agent Developer Kit (ADK) that handles expense reports
-* 🐍 [LangGraph Agent](https://github.com/google/A2A/tree/main/samples/python/agents/langgraph) - Currency conversion agent built with LangGraph (demonstrates financial tools)
-* 🐍 [CrewAI Agent](https://github.com/google/A2A/tree/main/samples/python/agents/crewai) - Image generation agent built with CrewAI
-* 📇 [Genkit Movie Agent](https://github.com/google/A2A/tree/main/samples/js/src/agents/movie-agent) - Movie information agent built with Genkit (demonstrates search/data extraction)
-* 📇 [Genkit Coder Agent](https://github.com/google/A2A/tree/main/samples/js/src/agents/coder) - Code generation agent built with Genkit (demonstrates developer tools)
+* 🎖️ [Google A2A](https://github.com/a2aproject/A2A) - An open protocol enabling communication and interoperability between opaque agentic applications
+* 🐍 [ADK Agent](https://github.com/a2aproject/a2a-samples/tree/main/samples/python/agents/adk_expense_reimbursement) - Sample agent built with Google's Agent Developer Kit (ADK) that handles expense reports
+* 🐍 [LangGraph Agent](https://github.com/a2aproject/a2a-samples/tree/main/samples/python/agents/langgraph) - Currency conversion agent built with LangGraph (demonstrates financial tools)
+* 🐍 [CrewAI Agent](https://github.com/a2aproject/a2a-samples/tree/main/samples/python/agents/crewai) - Image generation agent built with CrewAI
+* 📇 [Genkit Movie Agent](https://github.com/a2aproject/a2a-samples/tree/main/samples/js/src/agents/movie-agent) - Movie information agent built with Genkit (demonstrates search/data extraction)
+* 📇 [Genkit Coder Agent](https://github.com/a2aproject/a2a-samples/tree/main/samples/js/src/agents/coder) - Code generation agent built with Genkit (demonstrates developer tools)
 
 ### 🤖 Browser Automation
 
@@ -341,10 +341,10 @@ Below is a list of A2A server implementations, categorized by their primary func
 
 ## Frameworks
 
-* 🎖️ [Google ADK](https://github.com/google/A2A/tree/main/samples/python/agents/google_adk) - Google's Agent Developer Kit with A2A support
-* 🎖️ [LangGraph](https://github.com/google/A2A/tree/main/samples/python/agents/langgraph) - Framework for building stateful, multi-step agents
-* 🎖️ [CrewAI](https://github.com/google/A2A/tree/main/samples/python/agents/crewai) - Framework for creating and orchestrating role-playing agents
-* 🎖️ [Genkit](https://github.com/google/A2A/tree/main/samples/js/src/agents) - JavaScript framework for building generative AI applications
+* 🎖️ [Google ADK](https://github.com/a2aproject/a2a-samples/tree/main/samples/python/agents/adk_expense_reimbursement) - Google's Agent Developer Kit with A2A support
+* 🎖️ [LangGraph](https://github.com/a2aproject/a2a-samples/tree/main/samples/python/agents/langgraph) - Framework for building stateful, multi-step agents
+* 🎖️ [CrewAI](https://github.com/a2aproject/a2a-samples/tree/main/samples/python/agents/crewai) - Framework for creating and orchestrating role-playing agents
+* 🎖️ [Genkit](https://github.com/a2aproject/a2a-samples/tree/main/samples/js/src/agents) - JavaScript framework for building generative AI applications
 * 🐍 [Mentis](https://github.com/foreveryh/mentis) - A powerful multi-agent orchestration framework built on LangGraph
 * 🐍 [Qredence Agentic-Kernel](https://github.com/Qredence/Agentic-Kernel) - A flexible foundation AI system for creating A2A-compatible autonomous AI agents
 * 🐍 [PocketFlow](https://github.com/The-Pocket/PocketFlow) - Pocket Flow: 100-line LLM framework that lets agents build agents
@@ -361,8 +361,8 @@ Below is a list of A2A server implementations, categorized by their primary func
 
 ### Libraries
 
-* 🎖️ 🐍 [Python Common Library](https://github.com/google/A2A/tree/main/samples/python/common) - Python implementation of A2A client and server components
-* 🎖️ 📇 [JavaScript Common Library](https://github.com/google/A2A/tree/main/samples/js/src) - JavaScript/TypeScript implementation of A2A client and server components
+* 🎖️ 🐍 [Python Common Library](https://github.com/a2aproject/a2a-python) - Python implementation of A2A client and server components
+* 🎖️ 📇 [JavaScript Common Library](https://github.com/a2aproject/a2a-samples/tree/main/samples/js/src) - JavaScript/TypeScript implementation of A2A client and server components
 * 🏎️ [A2A Go by TheApeMachine](https://github.com/TheApeMachine/a2a-go) - A2A server in Go for facilitating communication between software agents
 * 📇 [NestJS A2A](https://github.com/thestupd/nestjs-a2a) - A NestJS library for implementing Google's Agent-to-Agent (A2A) protocol
 * ☕ [A2A4J](https://github.com/imfangs/a2a4j) - A Java implementation of the A2A protocol
@@ -372,9 +372,9 @@ Below is a list of A2A server implementations, categorized by their primary func
 
 ### Tools
 
-* 🎖️ 🐍 [Python CLI](https://github.com/google/A2A/tree/main/samples/python/hosts/cli) - Command-line tool to interact with A2A servers
-* 🎖️ 📇 [JavaScript CLI](https://github.com/google/A2A/tree/main/samples/js/src/cli.ts) - JavaScript command-line tool for interacting with A2A servers
-* 🎖️ 🐍 [Orchestrator Agent](https://github.com/google/A2A/tree/main/samples/python/hosts/multiagent) - An agent that can delegate tasks to remote agents through A2A
+* 🎖️ 🐍 [Python CLI](https://github.com/a2aproject/a2a-samples/tree/main/samples/python/hosts/cli) - Command-line tool to interact with A2A servers
+* 🎖️ 📇 [JavaScript CLI](https://github.com/a2aproject/a2a-samples/blob/main/samples/js/src/cli.ts) - JavaScript command-line tool for interacting with A2A servers
+* 🎖️ 🐍 [Orchestrator Agent](https://github.com/a2aproject/a2a-samples/tree/main/samples/python/hosts/multiagent) - An agent that can delegate tasks to remote agents through A2A
 * 📇 [A2A UI](https://github.com/egor-baranov/a2a-ui) - UI for Google A2A made using Next.js, TypeScript and Shadcn
 * 🏎️ [ka](https://github.com/tot-ra/ka) - AI agent accessible via CLI or network, A2A compatible
 * 🐍 [A2A Code Along](https://github.com/harshsondhi/a2acodeAlong) - Code along examples for A2A
@@ -395,9 +395,9 @@ Below is a list of A2A server implementations, categorized by their primary func
 
 ### Setting Up Your First A2A Server
 
-1. Clone the official A2A repository:
+1. Clone the official A2A samples repository:
    ```bash
-   git clone https://github.com/google/A2A.git
+   git clone https://github.com/a2aproject/a2a-samples.git
    ```
 2. Choose one of the sample agents based on your preferred framework
 3. Follow the setup instructions in the agent's README file

@@ -106,7 +106,7 @@
     },
     {
       "name": "Getting Started with A2A Protocol",
-      "url": "https://github.com/google/A2A#getting-started",
+      "url": "https://github.com/a2aproject/A2A#getting-started",
       "description": "Official getting started guide",
       "section": "Tutorials & Learning Resources",
       "category": null,
@@ -408,7 +408,7 @@
     },
     {
       "name": "Google A2A",
-      "url": "https://github.com/google/A2A",
+      "url": "https://github.com/a2aproject/A2A",
       "description": "An open protocol enabling communication and interoperability between opaque agentic applications",
       "section": "Server Implementations",
       "category": "Official Implementations",
@@ -423,7 +423,7 @@
     },
     {
       "name": "ADK Agent",
-      "url": "https://github.com/google/A2A/tree/main/samples/python/agents/google_adk",
+      "url": "https://github.com/a2aproject/a2a-samples/tree/main/samples/python/agents/adk_expense_reimbursement",
       "description": "Sample agent built with Google's Agent Developer Kit (ADK) that handles expense reports",
       "section": "Server Implementations",
       "category": "Official Implementations",
@@ -440,7 +440,7 @@
     },
     {
       "name": "LangGraph Agent",
-      "url": "https://github.com/google/A2A/tree/main/samples/python/agents/langgraph",
+      "url": "https://github.com/a2aproject/a2a-samples/tree/main/samples/python/agents/langgraph",
       "description": "Currency conversion agent built with LangGraph (demonstrates financial tools)",
       "section": "Server Implementations",
       "category": "Official Implementations",
@@ -457,7 +457,7 @@
     },
     {
       "name": "CrewAI Agent",
-      "url": "https://github.com/google/A2A/tree/main/samples/python/agents/crewai",
+      "url": "https://github.com/a2aproject/a2a-samples/tree/main/samples/python/agents/crewai",
       "description": "Image generation agent built with CrewAI",
       "section": "Server Implementations",
       "category": "Official Implementations",
@@ -474,7 +474,7 @@
     },
     {
       "name": "Genkit Movie Agent",
-      "url": "https://github.com/google/A2A/tree/main/samples/js/src/agents/movie-agent",
+      "url": "https://github.com/a2aproject/a2a-samples/tree/main/samples/js/src/agents/movie-agent",
       "description": "Movie information agent built with Genkit (demonstrates search/data extraction)",
       "section": "Server Implementations",
       "category": "Official Implementations",
@@ -491,7 +491,7 @@
     },
     {
       "name": "Genkit Coder Agent",
-      "url": "https://github.com/google/A2A/tree/main/samples/js/src/agents/coder",
+      "url": "https://github.com/a2aproject/a2a-samples/tree/main/samples/js/src/agents/coder",
       "description": "Code generation agent built with Genkit (demonstrates developer tools)",
       "section": "Server Implementations",
       "category": "Official Implementations",
@@ -2361,7 +2361,7 @@
     },
     {
       "name": "Google ADK",
-      "url": "https://github.com/google/A2A/tree/main/samples/python/agents/google_adk",
+      "url": "https://github.com/a2aproject/a2a-samples/tree/main/samples/python/agents/adk_expense_reimbursement",
       "description": "Google's Agent Developer Kit with A2A support",
       "section": "Frameworks",
       "category": null,
@@ -2376,7 +2376,7 @@
     },
     {
       "name": "LangGraph",
-      "url": "https://github.com/google/A2A/tree/main/samples/python/agents/langgraph",
+      "url": "https://github.com/a2aproject/a2a-samples/tree/main/samples/python/agents/langgraph",
       "description": "Framework for building stateful, multi-step agents",
       "section": "Frameworks",
       "category": null,
@@ -2391,7 +2391,7 @@
     },
     {
       "name": "CrewAI",
-      "url": "https://github.com/google/A2A/tree/main/samples/python/agents/crewai",
+      "url": "https://github.com/a2aproject/a2a-samples/tree/main/samples/python/agents/crewai",
       "description": "Framework for creating and orchestrating role-playing agents",
       "section": "Frameworks",
       "category": null,
@@ -2406,7 +2406,7 @@
     },
     {
       "name": "Genkit",
-      "url": "https://github.com/google/A2A/tree/main/samples/js/src/agents",
+      "url": "https://github.com/a2aproject/a2a-samples/tree/main/samples/js/src/agents",
       "description": "JavaScript framework for building generative AI applications",
       "section": "Frameworks",
       "category": null,
@@ -2608,7 +2608,7 @@
     },
     {
       "name": "Python Common Library",
-      "url": "https://github.com/google/A2A/tree/main/samples/python/common",
+      "url": "https://github.com/a2aproject/a2a-python",
       "description": "Python implementation of A2A client and server components",
       "section": "Utilities",
       "category": "Libraries",
@@ -2626,7 +2626,7 @@
     },
     {
       "name": "JavaScript Common Library",
-      "url": "https://github.com/google/A2A/tree/main/samples/js/src",
+      "url": "https://github.com/a2aproject/a2a-samples/tree/main/samples/js/src",
       "description": "JavaScript/TypeScript implementation of A2A client and server components",
       "section": "Utilities",
       "category": "Libraries",
@@ -2746,7 +2746,7 @@
     },
     {
       "name": "Python CLI",
-      "url": "https://github.com/google/A2A/tree/main/samples/python/hosts/cli",
+      "url": "https://github.com/a2aproject/a2a-samples/tree/main/samples/python/hosts/cli",
       "description": "Command-line tool to interact with A2A servers",
       "section": "Utilities",
       "category": "Tools",
@@ -2764,7 +2764,7 @@
     },
     {
       "name": "JavaScript CLI",
-      "url": "https://github.com/google/A2A/tree/main/samples/js/src/cli.ts",
+      "url": "https://github.com/a2aproject/a2a-samples/blob/main/samples/js/src/cli.ts",
       "description": "JavaScript command-line tool for interacting with A2A servers",
       "section": "Utilities",
       "category": "Tools",
@@ -2782,7 +2782,7 @@
     },
     {
       "name": "Orchestrator Agent",
-      "url": "https://github.com/google/A2A/tree/main/samples/python/hosts/multiagent",
+      "url": "https://github.com/a2aproject/a2a-samples/tree/main/samples/python/hosts/multiagent",
       "description": "An agent that can delegate tasks to remote agents through A2A",
       "section": "Utilities",
       "category": "Tools",
