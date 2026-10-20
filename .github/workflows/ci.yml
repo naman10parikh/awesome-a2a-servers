@@ -1,0 +1,22 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - name: The checker catches each fault it promises to catch
+        run: node --test tools/build-data.test.mjs
+      - name: Every entry keeps the format, and list.json matches the README
+        run: node tools/build-data.mjs --check

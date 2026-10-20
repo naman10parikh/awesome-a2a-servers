@@ -10,12 +10,13 @@ Please ensure your pull request adheres to the following guidelines:
 - Make sure your contribution is useful and relevant before submitting. That implies it has enough content and a good, succinct description.
 - Make an individual pull request for each suggestion.
 - Use [title-casing](https://capitalizemytitle.com/) (AP style) for titles.
-- Use the following format: `* [Name](link) - Description.`
+- Use the following format: `* <marks> [Name](link) - Description.` The marks come from the README's Legend (language, scope, official).
 - Keep descriptions short and simple, but descriptive.
 - Check your spelling and grammar.
 - Make sure your text editor is set to remove trailing whitespace.
 - The pull request should have a useful title and include a link to the package and why it should be included.
 - New categories, or improvements to the existing categorization are welcome, but should be done in a separate pull request.
+- Then run `node tools/build-data.mjs && node tools/build-data.mjs --check` and commit `list.json` with `README.md`. If you cannot run Node, say so in the pull request and a maintainer will rebuild it.
 
 ## Requirements for new entries
 

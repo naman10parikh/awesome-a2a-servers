@@ -1,0 +1,32 @@
+# Awesome A2A Servers
+
+> A curated list of Agent2Agent (A2A) protocol servers, clients, libraries and tutorials. People read README.md; agents read list.json, which holds the same entries and is rebuilt from it.
+
+A2A is an open protocol, started by Google, that lets agents built on different frameworks find each other and work together. Each entry here links to an open-source project that implements or uses it, with marks for its language, scope and whether it is official.
+
+## Start here
+
+- [AGENTS.md](AGENTS.md): how to read the list, add an entry, and run the check
+- [README.md](README.md): the list for people, by section and category
+- [list.json](list.json): every entry with its name, link, description, section, category, languages and scope
+
+## Sections
+
+- [Official Resources](README.md#official-resources): the protocol's own repository and specification
+- [Clients](README.md#clients): command-line and web clients for A2A servers
+- [Tutorials & Learning Resources](README.md#tutorials--learning-resources): guides, samples and courses
+- [Server Implementations](README.md#server-implementations): A2A servers in 18 categories, from browser automation to multi-agent systems
+- [Frameworks](README.md#frameworks): agent frameworks with A2A support
+- [Utilities](README.md#utilities): libraries in Python, JavaScript, Go, Java, .NET and Rust, and tools
+- [Documentation](README.md#documentation): documentation and translations
+- [Legend](README.md#legend): what each mark means
+
+## Contributing
+
+- [CONTRIBUTING.md](CONTRIBUTING.md): the entry format and what qualifies
+- [tools/build-data.mjs](tools/build-data.mjs): rebuilds list.json from README.md and checks the format
+
+## Protocol
+
+- [A2A on GitHub](https://github.com/a2aproject/A2A): the protocol's repository
+- [A2A specification](https://a2a-protocol.org/latest/specification/): the protocol specification

@@ -1,10 +1,62 @@
 # Awesome A2A Servers [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-A curated list of awesome Agent-to-Agent (A2A) Protocol servers.
+<!-- fleet:header:start -->
+[![CI](https://img.shields.io/github/actions/workflow/status/naman10parikh/awesome-a2a-servers/ci.yml?branch=main&style=flat-square&label=ci)](https://github.com/naman10parikh/awesome-a2a-servers/actions) [![License: MIT](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE) [![Agent-native](https://img.shields.io/badge/agent--native-yes-2f5d8a?style=flat-square)](AGENTS.md) [![Stars](https://img.shields.io/github/stars/naman10parikh/awesome-a2a-servers?style=flat-square)](https://github.com/naman10parikh/awesome-a2a-servers/stargazers)
+
+**A curated list of Agent2Agent (A2A) protocol servers, clients, libraries and tutorials.**
+
+An agent-native list: written for people and kept machine-readable for agents, with [AGENTS.md](AGENTS.md) and [llms.txt](llms.txt) telling an agent how to read and extend it.
+
+[AGENTS.md](AGENTS.md) · [llms.txt](llms.txt) · [Security](SECURITY.md) · [Contributing](CONTRIBUTING.md) · [All projects](https://github.com/naman10parikh)
+<!-- fleet:header:end -->
+
+Each entry links to an open-source project that implements or uses the protocol: servers by category, clients,
+frameworks, libraries, tools, tutorials and documentation. It is for developers and coding agents choosing an A2A
+building block. People read this page; agents read [list.json](list.json), which holds the same entries and is
+rebuilt from this page.
+
+<!-- fleet:use:start -->
+## Use it from any coding agent
+
+Codex, Cursor, OpenCode, GitHub Copilot and other agents read [AGENTS.md](AGENTS.md); Claude Code reads [CLAUDE.md](CLAUDE.md) and Gemini CLI reads [GEMINI.md](GEMINI.md), which import it. [llms.txt](llms.txt) maps every surface for agents that read first.
+<!-- fleet:use:end -->
+
+## Quick start
+
+Read the sections below, or ask for the entries as JSON:
+
+```bash
+curl -s https://raw.githubusercontent.com/naman10parikh/awesome-a2a-servers/main/list.json | jq .count
+curl -s https://raw.githubusercontent.com/naman10parikh/awesome-a2a-servers/main/list.json \
+  | jq -r '.entries[] | select(.languages | index("Go")) | "\(.name)  \(.url)"'
+```
+
+To add a project, edit this page in the format the [contribution guide](CONTRIBUTING.md) gives. Then rebuild the JSON
+and run the check (Node 20 or later, nothing to install):
+
+```bash
+node tools/build-data.mjs && node tools/build-data.mjs --check
+```
+
+## How it works
+
+- This page is the list. Each entry is one line: marks from the [legend](#legend), a linked name and a short
+  description.
+- [`tools/build-data.mjs`](tools/build-data.mjs) reads the page and writes [`list.json`](list.json): one record per
+  entry, with its section, category, languages and scope.
+- CI runs the same script with `--check` on every push and pull request. The check fails when an entry breaks the
+  format, a mark is missing from the legend, a link repeats within a section, a contents link finds no heading, or
+  `list.json` is out of date.
+- Once a week, a scheduled job checks every link and searches GitHub for A2A projects the list does not have yet. It
+  writes both to its run summary. A person decides what changes; nothing merges by itself.
+
+## Contents
 
 * [What is A2A?](#what-is-a2a)
+* [Official Resources](#official-resources)
 * [Clients](#clients)
 * [Tutorials & Learning Resources](#tutorials--learning-resources)
+* [Legend](#legend)
 * [Server Implementations](#server-implementations)
 * [Frameworks](#frameworks)
 * [Utilities](#utilities)
@@ -17,12 +69,12 @@ A2A (Agent-to-Agent) is an open protocol initiated by Google that enables commun
 
 ## Official Resources
 
-* [A2A Protocol GitHub Repository](https://github.com/google/A2A) - Google's official repository for A2A protocol
-* [A2A Specification](https://github.com/google/A2A/blob/main/specification/json/a2a.json) - JSON Schema defining A2A protocol
+* [A2A Protocol GitHub Repository](https://github.com/a2aproject/A2A) - The official repository for the A2A protocol (moved from google/A2A)
+* [A2A Specification](https://a2a-protocol.org/latest/specification/) - The A2A protocol specification
 
 ## Clients
 
-* Check out sample clients in the [official A2A repository](https://github.com/google/A2A/tree/main/samples)
+* 🎖️ [A2A Samples](https://github.com/a2aproject/a2a-samples) - Official sample clients and agents for A2A
 * 📇 [A2A CLI](https://github.com/chrishayuk/a2a-cli) - Command-line client for interacting with A2A servers
 * 📇 [A2A UI](https://github.com/egor-baranov/a2a-ui) - UI for Google A2A made using Next.js, TypeScript and Shadcn
 * 🏎️ [ka](https://github.com/tot-ra/ka) - AI agent accessible via CLI or network, A2A compatible
@@ -51,6 +103,7 @@ A2A (Agent-to-Agent) is an open protocol initiated by Google that enables commun
 ## Legend
 
 * 🎖️ – official implementation
+* 📝 – documentation
 * programming language  
    * 🐍 – Python codebase  
    * 📇 – TypeScript/JavaScript codebase  
@@ -341,9 +394,46 @@ Below is a list of A2A server implementations, categorized by their primary func
 3. Follow the setup instructions in the agent's README file
 4. Use one of the CLI tools to interact with your agent
 
-## Contributing
 
-Please read the [contribution guidelines](CONTRIBUTING.md) before submitting a pull request.
+<!-- fleet:anatomy:start -->
+## What it is made of
+
+Every project in this fleet is graded on the same 11 harness components and on self-improvement. Each mark is backed by a file you can open.
+
+| Component | Grade | Where |
+| --- | --- | --- |
+| Identity | n/a | a list, not an agent employee: it has no persona |
+| Memory | n/a | nothing to remember between runs; list.json is the data |
+| Skills | n/a | a list ships no skills |
+| Tools/CLIs | n/a | no command-line tool by design; tools/build-data.mjs:1 is the build and check script |
+| Hooks | n/a | a list needs none |
+| Sub-agents | n/a | a list needs none |
+| MCPs | n/a | no MCP server by design |
+| Dispatch | ✅ | .github/workflows/refresh.yml:6 (weekly cron and manual dispatch) |
+| Evals | ✅ | .github/workflows/ci.yml:19 (the checker's 8 tests, then the list check; a failure blocks the merge) |
+| Observability | n/a | nothing runs that needs a trail; the weekly run summary is the list's health report |
+| Sandbox/Infra | n/a | nothing executes |
+| RSI / open-endedness | 🟡 | .github/workflows/refresh.yml:33 (weekly: new A2A projects and dead links, for a person to act on; no dsip.json) |
+
+✅ real and tested · 🟡 partial, with the reason in the row · ❌ absent
+<!-- fleet:anatomy:end -->
+
+
+<!-- fleet:footer:start -->
+## Part of a fleet
+
+One of the agent-native open-source projects by [Naman Parikh](https://github.com/naman10parikh): agent-native systems, operated by agent employees, built to improve and evolve themselves. Each one owns one part of an agent's harness or of the product around it.
+
+Siblings: [agentdial](https://github.com/naman10parikh/agentdial) (identity) · [wikimem](https://github.com/naman10parikh/wikimem) (memory) · [skillsmith](https://github.com/naman10parikh/skillsmith) (skills) · [agent-booster](https://github.com/naman10parikh/agent-booster) (tools / CLIs) · [armory](https://github.com/naman10parikh/armory) (MCPs and the component registry) · [agentgrid](https://github.com/naman10parikh/agentgrid) (dispatch) · [agentswarm](https://github.com/naman10parikh/agentswarm) (dispatch) · [agentbench](https://github.com/naman10parikh/agentbench) (evals) · [agentmoney](https://github.com/naman10parikh/agentmoney) (observability) · [claude-harness](https://github.com/naman10parikh/claude-harness) (the whole harness, as a template).
+
+## Contributing and security
+
+Read [CONTRIBUTING.md](CONTRIBUTING.md); AI-assisted pull requests are welcome. Report a vulnerability privately, as [SECURITY.md](SECURITY.md) explains.
+
+## Star history
+
+[![Star history chart](https://api.star-history.com/svg?repos=naman10parikh/awesome-a2a-servers&type=Date)](https://star-history.com/#naman10parikh/awesome-a2a-servers&Date)
+<!-- fleet:footer:end -->
 
 ## License
 

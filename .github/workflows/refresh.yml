@@ -1,0 +1,47 @@
+name: weekly refresh
+
+# Once a week: list dead links, and A2A projects the list does not have yet, in the run summary.
+# It reads only. A person decides what changes; nothing is committed or merged by this workflow.
+on:
+  schedule:
+    - cron: "17 9 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Check every link
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --no-progress --max-concurrency 8 --accept 200,206,429 README.md
+          output: dead-links.md
+          fail: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Dead links to the run summary
+        run: cat dead-links.md >> "$GITHUB_STEP_SUMMARY"
+
+  discover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: A2A projects the list does not have yet
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          for t in a2a a2a-protocol agent2agent; do
+            gh search repos --topic "$t" --sort stars --limit 100 --json url,description,stargazersCount > "found-$t.json"
+          done
+          jq -s -r --slurpfile list list.json '
+            ($list[0].entries | map(.url | ascii_downcase | rtrimstr("/"))) as $have
+            | add | unique_by(.url | ascii_downcase)
+            | map(select((.url | ascii_downcase) as $u | ($have | index($u)) | not))
+            | sort_by(-.stargazersCount) | .[:30]
+            | "## A2A projects the list does not have yet", "",
+              (.[] | "- [\(.url | ltrimstr("https://github.com/"))](\(.url)), \(.stargazersCount) stars: \((.description // "") | gsub("[\\r\\n|]"; " ") | .[:140])")
+          ' found-*.json >> "$GITHUB_STEP_SUMMARY"
