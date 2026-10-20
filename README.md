@@ -1,13 +1,22 @@
 # Awesome A2A Servers [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 <!-- fleet:header:start -->
-[![CI](https://img.shields.io/github/actions/workflow/status/naman10parikh/awesome-a2a-servers/ci.yml?branch=main&style=flat-square&label=ci)](https://github.com/naman10parikh/awesome-a2a-servers/actions) [![License: MIT](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE) [![Agent-native](https://img.shields.io/badge/agent--native-yes-2f5d8a?style=flat-square)](AGENTS.md) [![Stars](https://img.shields.io/github/stars/naman10parikh/awesome-a2a-servers?style=flat-square)](https://github.com/naman10parikh/awesome-a2a-servers/stargazers)
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg"><img alt="Awesome A2A Servers: A curated list of Agent2Agent (A2A) protocol servers, clients, libraries and tutorials." src="assets/banner.svg" width="100%"></picture></p>
+
+<p align="center">
+<a href="https://github.com/naman10parikh/awesome-a2a-servers/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/naman10parikh/awesome-a2a-servers/actions/workflows/ci.yml/badge.svg"></a>
+<a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-2f5d8a?style=flat-square"></a>
+<a href="https://x.com/naman10parikh"><img alt="Follow @naman10parikh on X" src="https://img.shields.io/badge/follow-%40naman10parikh-000000?style=flat-square&amp;logo=x&amp;logoColor=white"></a>
+<a href="https://www.linkedin.com/in/naman-parikh1/"><img alt="Naman Parikh on LinkedIn" src="https://img.shields.io/badge/LinkedIn-Naman%20Parikh-0a66c2?style=flat-square"></a>
+</p>
+
+<p align="center"><a href="#quick-start">Quick start</a> · <a href="docs/README.md">How it works</a> · <a href="AGENTS.md">AGENTS.md</a> · <a href="llms.txt">llms.txt</a> · <a href="https://github.com/naman10parikh/awesome-a2a-servers/discussions">Discussions</a> · <a href="https://github.com/naman10parikh">All projects</a></p>
 
 **A curated list of Agent2Agent (A2A) protocol servers, clients, libraries and tutorials.**
 
 An agent-native list: written for people and kept machine-readable for agents, with [AGENTS.md](AGENTS.md) and [llms.txt](llms.txt) telling an agent how to read and extend it.
 
-[AGENTS.md](AGENTS.md) · [llms.txt](llms.txt) · [Security](SECURITY.md) · [Contributing](CONTRIBUTING.md) · [All projects](https://github.com/naman10parikh)
+_Awesome A2A Servers is part of an agent-native play for agent-native systems that can eventually be recursively self-improving and evolving, operated by agent employees._
 <!-- fleet:header:end -->
 
 Each entry links to an open-source project that implements or uses the protocol: servers by category, clients,
@@ -413,7 +422,7 @@ Every project in this fleet is graded on the same 11 harness components and on s
 | Evals | ✅ | .github/workflows/ci.yml:19 (the checker's 8 tests, then the list check; a failure blocks the merge) |
 | Observability | n/a | nothing runs that needs a trail; the weekly run summary is the list's health report |
 | Sandbox/Infra | n/a | nothing executes |
-| RSI / open-endedness | 🟡 | .github/workflows/refresh.yml:33 (weekly: new A2A projects and dead links, for a person to act on; no dsip.json) |
+| Self-improvement | 🟡 | .github/workflows/refresh.yml:33 (weekly: new A2A projects and dead links, for a person to act on; no dsip.json) |
 
 ✅ real and tested · 🟡 partial, with the reason in the row · ❌ absent
 <!-- fleet:anatomy:end -->
@@ -422,17 +431,38 @@ Every project in this fleet is graded on the same 11 harness components and on s
 <!-- fleet:footer:start -->
 ## Part of a fleet
 
-One of the agent-native open-source projects by [Naman Parikh](https://github.com/naman10parikh): agent-native systems, operated by agent employees, built to improve and evolve themselves. Each one owns one part of an agent's harness or of the product around it.
+One of the projects by [Naman Parikh](https://github.com/naman10parikh). Each owns one part of an agent's harness, or of the product around an agent, and all of them follow one standard.
 
-Siblings: [agentdial](https://github.com/naman10parikh/agentdial) (identity) · [wikimem](https://github.com/naman10parikh/wikimem) (memory) · [skillsmith](https://github.com/naman10parikh/skillsmith) (skills) · [agent-booster](https://github.com/naman10parikh/agent-booster) (tools / CLIs) · [armory](https://github.com/naman10parikh/armory) (MCPs and the component registry) · [agentgrid](https://github.com/naman10parikh/agentgrid) (dispatch) · [agentswarm](https://github.com/naman10parikh/agentswarm) (dispatch) · [agentbench](https://github.com/naman10parikh/agentbench) (evals) · [agentmoney](https://github.com/naman10parikh/agentmoney) (observability) · [claude-harness](https://github.com/naman10parikh/claude-harness) (the whole harness, as a template).
+| Related project | What it owns |
+| --- | --- |
+| [AgentDial](https://github.com/naman10parikh/agentdial) | Identity |
+| [WikiMem](https://github.com/naman10parikh/wikimem) | Memory |
+| [Skillsmith](https://github.com/naman10parikh/skillsmith) | Skills |
+| [Agent Booster](https://github.com/naman10parikh/agent-booster) | Tools / CLIs |
+| [Armory](https://github.com/naman10parikh/armory) | MCPs and the component registry |
+| [AgentGrid](https://github.com/naman10parikh/agentgrid) | Dispatch |
+| [AgentSwarm](https://github.com/naman10parikh/agentswarm) | Dispatch |
+| [AgentBench](https://github.com/naman10parikh/agentbench) | Evals |
+| [AgentMoney](https://github.com/naman10parikh/agentmoney) | Observability |
+| [Claude Harness](https://github.com/naman10parikh/claude-harness) | The whole harness, as a template |
+
+## Community
+
+Questions and ideas go to [Discussions](https://github.com/naman10parikh/awesome-a2a-servers/discussions); bugs go to [issues](https://github.com/naman10parikh/awesome-a2a-servers/issues/new/choose). Follow the work on [X](https://x.com/naman10parikh) and [LinkedIn](https://www.linkedin.com/in/naman-parikh1/).
 
 ## Contributing and security
 
-Read [CONTRIBUTING.md](CONTRIBUTING.md); AI-assisted pull requests are welcome. Report a vulnerability privately, as [SECURITY.md](SECURITY.md) explains.
+Read [CONTRIBUTING.md](CONTRIBUTING.md). AI-assisted pull requests are welcome. Report a vulnerability privately, as [SECURITY.md](SECURITY.md) explains.
 
 ## Star history
 
-[![Star history chart](https://api.star-history.com/svg?repos=naman10parikh/awesome-a2a-servers&type=Date)](https://star-history.com/#naman10parikh/awesome-a2a-servers&Date)
+If it is useful to you, a star helps other people find it.
+
+<a href="https://star-history.com/#naman10parikh/awesome-a2a-servers&Date"><picture><source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=naman10parikh/awesome-a2a-servers&type=Date&theme=dark"><img alt="Star history chart" src="https://api.star-history.com/svg?repos=naman10parikh/awesome-a2a-servers&type=Date" width="640"></picture></a>
+
+## Contributors
+
+<a href="https://github.com/naman10parikh/awesome-a2a-servers/graphs/contributors"><img alt="Contributors" src="https://contrib.rocks/image?repo=naman10parikh/awesome-a2a-servers"></a>
 <!-- fleet:footer:end -->
 
 ## License

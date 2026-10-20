@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: If you use this software, please cite it as below.
+title: "Awesome A2A Servers: A curated list of Agent2Agent (A2A) protocol servers, clients, libraries and tutorials."
+type: software
+authors:
+  - family-names: Parikh
+    given-names: Naman
+repository-code: "https://github.com/naman10parikh/awesome-a2a-servers"
+license: MIT
+version: "0.1.0"
+abstract: "A curated list of Agent2Agent (A2A) protocol servers, clients, libraries and tutorials."
+keywords: ["agent-native", "a2a", "agent2agent", "a2a-protocol", "awesome-list", "awesome"]
